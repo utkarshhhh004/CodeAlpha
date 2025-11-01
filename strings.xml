@@ -1,0 +1,4 @@
+Intent shareIntent = new Intent(Intent.ACTION_SEND);
+shareIntent.setType("text/plain");
+shareIntent.putExtra(Intent.EXTRA_TEXT, quoteText.getText() + " " + authorText.getText());
+startActivity(Intent.createChooser(shareIntent, "Share via"));
